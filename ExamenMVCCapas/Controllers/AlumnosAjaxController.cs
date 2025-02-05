@@ -32,14 +32,25 @@ namespace MVCCapasJQueryAjax.Controllers
         [HttpPost]
         public JsonResult Create(string nombre, string apellido, DateTime fechaNacimiento, string correoElectronico) 
         {
-            var service= new AlumnoService();   
-            service.Insert(new Domain.Alumno { Nombre = nombre, 
-                Apellido=apellido, 
-                FechaNacimiento= fechaNacimiento, 
-                CorreoElectronico= correoElectronico, 
-                Estado=true });
+            try 
+            {
+                var service = new AlumnoService();
+                service.Insert(new Domain.Alumno
+                {
+                    Nombre = nombre,
+                    Apellido = apellido,
+                    FechaNacimiento = fechaNacimiento,
+                    CorreoElectronico = correoElectronico,
+                    Estado = true
+                });
 
-            return Json(new { message = "Formulario enviado con éxito. Gracias!" });
+                return Json(new { message = "Formulario enviado con éxito. Gracias!" });
+            }
+            catch(Exception )  
+            {
+                return Json(new { message = "Error, comunicarse con el Administrador" });
+            }
+                        
         }
     }
 }
