@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "IndexAjax";
+}
+
+<h1>IndexAjax</h1>
+
+<h2>Lista de Alumnos</h2>
+
+<input type="text" id="txtFilter" />
+<button id="listaAlumnosBoton" class="btn btn-primary">Listar Alumnos</button>
+<button id="limpiaAlumnosBoton" class="btn btn-primary">Limpiar Alumnos</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Correo Electrónico</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+
+<!--Basta esta línea para obtener las funcionalidades del jquery-->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<!--No es necesaria esta línea, salvo que se haya hecho modificaciones al jquery-->
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    $(document).ready(function()
+    {
+        $('#limpiaAlumnosBoton').click(function ()
+        {
+            var tableBody = $('table tbody');
+            tableBody.empty(); // Vaciar la tabla
+        });
+
+
+        $('#listaAlumnosBoton').click(function(){
+
+            //alert('Llamada');
+
+            var filter = $('#txtFilter').val();
+            //alert(filter);
+
+
+             $.ajax({
+                type: "GET",
+                //url: "/Alumnos/GetAjax",
+                url: "/Alumnos/GetAjax?filter="+filter,
+                success: function (result) {
+
+                    console.log(result);
+
+                    var tableBody = $('table tbody');
+                     tableBody.empty(); // Vaciar la tabla 
+
+                    result.forEach(function (alumno) {
+                        var newRow = `
+                                        <tr>
+                                            <td>${alumno.alumnoId}</td>
+                                            <td>${alumno.nombre}</td>
+                                            <td>${alumno.apellido}</td>
+                                            <td>${alumno.fechaNacimiento}</td>
+                                            <td>${alumno.correoElectronico}</td>                                                
+                                        </tr>`;
+                        tableBody.append(newRow);
+                    });
+                },
+                error: function () {
+                    alert('Hubo un error al listar los estudiantes.');
+                }
+            });
+        });
+    });
+
+</script>

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCapasJQueryAjax", "ExamenMVCCapas\MVCCapasJQueryAjax.csproj", "{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{03AFB270-E5EC-466E-A164-3D7E0533CC19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{4F3FC033-A033-41F1-8204-53F3C7EE1EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{8CC93DF7-3401-4772-8253-3CF4BFF5146B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8D2E5442-F47D-4FAF-A506-F4CF82D7D269}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AFB270-E5EC-466E-A164-3D7E0533CC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AFB270-E5EC-466E-A164-3D7E0533CC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AFB270-E5EC-466E-A164-3D7E0533CC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AFB270-E5EC-466E-A164-3D7E0533CC19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3FC033-A033-41F1-8204-53F3C7EE1EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3FC033-A033-41F1-8204-53F3C7EE1EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3FC033-A033-41F1-8204-53F3C7EE1EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3FC033-A033-41F1-8204-53F3C7EE1EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC93DF7-3401-4772-8253-3CF4BFF5146B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC93DF7-3401-4772-8253-3CF4BFF5146B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC93DF7-3401-4772-8253-3CF4BFF5146B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC93DF7-3401-4772-8253-3CF4BFF5146B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1441DA9D-DFD8-4E68-B6CE-EA2EB49D7646} = {8D2E5442-F47D-4FAF-A506-F4CF82D7D269}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52DCB40A-A9F8-45C1-95F2-D15BCDE6F038}
+	EndGlobalSection
+EndGlobal
