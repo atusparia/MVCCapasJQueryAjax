@@ -67,6 +67,7 @@
 </div>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
     $(document).ready(function()
@@ -100,7 +101,14 @@
                     correoElectronico: $("#correoelectronico").val()
                 },
                 success: function(response){
-                    alert('Registro exitoso'); 
+                    //alert('Registro exitoso');
+                    //alert(response.message);
+
+                    Swal.fire({
+                      title: "Buen trabajo!",
+                      text: response.message,
+                      icon: "success"
+                    });
                     
                     $('#crearAlumnoModal').modal('hide');
                     GetAlumnos();
